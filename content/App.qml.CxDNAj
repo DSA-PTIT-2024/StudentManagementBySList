@@ -1,0 +1,52 @@
+// Copyright (C) 2021 The Qt Company Ltd.
+// SPDX-License-Identifier: LicenseRef-Qt-Commercial OR GPL-3.0-only
+
+import QtQuick 6.2
+import QtQuick.Controls
+import StudentManagement
+import TableStudentController
+Window {
+    id: mainWindow
+    width: mainScreen.width
+    height: mainScreen.height
+
+    visible: true
+    title: "StudentManagement"
+    TableStudentController{
+        id: tableStudentController
+    }
+
+    Screen01 {
+        id: mainScreen
+
+        tableStudent.model: tableStudentController
+
+
+        tableStudent.delegate: Rectangle {
+                                   implicitWidth: delegateText.contentWidth + 40
+                                   implicitHeight: delegateText.contentHeight + 20
+                                   color: '#f5f5f5'
+                                   border.width: 1
+
+                                   Text {
+                                       id: delegateText
+                                       text: display
+                                       anchors.fill: parent
+                                       anchors.margins: 10
+                                       font.pixelSize: 18
+                                       verticalAlignment: Text.AlignVCenter
+                                       horizontalAlignment: Text.AlignHCenter
+                                   }
+                               }
+
+
+
+        tableStudent.columnWidthProvider: function (column) {
+            return tableStudent.columnWidths[column]
+        }
+    }
+
+
+
+}
+
