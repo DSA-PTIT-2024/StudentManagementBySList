@@ -14,7 +14,7 @@ if (Qt6_VERSION VERSION_GREATER_EQUAL 6.3)
 endif()
 
 qt_add_executable(StudentManagementBySListApp src/main.cpp
-    src/Containers/CList/CList.hpp src/Containers/CList/CListExceptions.hpp src/Containers/CList/CListIterator.hpp src/Containers/CList/CListNode.hpp src/Containers/DList/DList.hpp src/Containers/DList/DListExceptions.hpp src/Containers/DList/DListIterator.hpp src/Containers/DList/DListNode.hpp src/Containers/List/List.hpp src/Containers/List/ListExceptions.hpp src/Containers/List/ListIterator.hpp src/Containers/List/ListNode.hpp src/Containers/SList/SList.hpp src/Containers/SList/SListExceptions.hpp src/Containers/SList/SListIterator.hpp src/Containers/SList/SListNode.hpp src/Containers/Stack/Stack.hpp src/Containers/Stack/StackExceptions.hpp src/Utilities/Allocator.hpp src/Utilities/Exception.hpp src/DSALibraries.hpp
+    src/Containers/SList/SList.hpp src/Containers/SList/SListExceptions.hpp src/Containers/SList/SListIterator.hpp src/Containers/SList/SListNode.hpp src/Utilities/Allocator.hpp src/Utilities/Exception.hpp src/DSALibraries.hpp
     tablestudentcontroller.h tablestudentcontroller.cpp
     student.h student.cpp)
 

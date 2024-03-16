@@ -1,6 +1,7 @@
 
 #ifndef DSA_LIBRARIES_SLIST_NODE_HPP
 #define DSA_LIBRARIES_SLIST_NODE_HPP
+#include <cstddef>
 #include <utility>
 namespace DSALibraries::Containers
 {
