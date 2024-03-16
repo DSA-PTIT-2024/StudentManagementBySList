@@ -25,27 +25,27 @@ class Exception : std::exception
     {
     }
 
-    [[nodiscard]] constexpr string_type GetMessage() const
+    [[nodiscard]] string_type GetMessage() const
     {
         return _message;
     }
 
-    [[nodiscard]] constexpr string_type GetFile() const
+    [[nodiscard]] string_type GetFile() const
     {
         return _fileText;
     }
 
-    [[nodiscard]] constexpr numeric_type GetLineNumber() const
+    [[nodiscard]] numeric_type GetLineNumber() const
     {
         return _lineNumber;
     }
 
-    [[nodiscard]] constexpr string_type GetFullMessage() const
+    [[nodiscard]] string_type GetFullMessage() const
     {
         return GetMessage() + "with file " + GetFile() + " at line " + std::to_string(GetLineNumber());
     }
 
-    [[nodiscard]] constexpr string_type GetMessageWithLine() const
+    [[nodiscard]] string_type GetMessageWithLine() const
     {
         return GetMessage() + " at line " + std::to_string(GetLineNumber());
     }
